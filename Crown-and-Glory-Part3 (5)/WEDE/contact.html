@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Crown &amp; Glory Hair Studio Johannesburg</title>
+  <meta name="description" content="Find Crown &amp; Glory Hair Studio in Johannesburg: addresses, phone numbers, opening hours, an interactive map and a contact form.">
+  <meta name="keywords" content="contact hair salon Johannesburg, hair studio address, hair salon near me, Crown and Glory contact">
+  <meta name="author" content="Crown &amp; Glory Hair Studio">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ff8fb1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://server.arcgisonline.com https://unpkg.com; connect-src 'self' https://jsonplaceholder.typicode.com; form-action 'self' https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://your-username.github.io/WEDE/contact.html">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crown &amp; Glory Hair Studio">
+  <meta property="og:title" content="Contact Us | Crown &amp; Glory Hair Studio Johannesburg">
+  <meta property="og:description" content="Find Crown &amp; Glory Hair Studio in Johannesburg: addresses, phone numbers, opening hours, an interactive map and a contact form.">
+  <meta property="og:url" content="https://your-username.github.io/WEDE/contact.html">
+  <meta property="og:image" content="https://your-username.github.io/WEDE/images/knotless-braids-protective-style.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HairSalon", "name": "Crown & Glory Hair Studio", "description": "Braids, hair installation and hair treatments in Johannesburg.", "url": "https://your-username.github.io/WEDE/", "telephone": "+27 11 555 0199", "priceRange": "R300 - R850", "address": {"@type": "PostalAddress", "streetAddress": "123 Beauty Boulevard, Suite A", "addressLocality": "Johannesburg", "addressCountry": "ZA"}, "geo": {"@type": "GeoCoordinates", "latitude": -26.1904, "longitude": 28.0335}, "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-15:00"]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">Crown &amp; Glory<small>hair studio</small></a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+    <nav aria-label="Main navigation">
+      <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services &amp; Gallery</a></li>
+          <li><a href="enquiry.html">Bookings</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="card" aria-labelledby="contact-title">
+      <h1 id="contact-title" class="section-title">Contact Details &amp; Locations</h1>
+      <div class="locations-grid">
+        <div class="location-card">
+          <h2>Main Studio</h2>
+          <p>123 Beauty Boulevard, Suite A, Johannesburg</p>
+          <p><strong>Phone:</strong> <a href="tel:+27115550199">+27 11 555 0199</a></p>
+          <p><strong>Hours:</strong> Mon-Fri 08:00-18:00, Sat 08:00-15:00</p>
+          <button class="btn btn-outline" type="button" data-studio="0">Show on map 📍</button>
+        </div>
+        <div class="location-card">
+          <h2>Campus Pop-Up Studio</h2>
+          <p>IIE Rosebank College, 23 Jorissen Street, Braamfontein, Johannesburg, 2017</p>
+          <p><strong>Phone:</strong> <a href="tel:+27115550200">+27 11 555 0200</a></p>
+          <p><strong>Hours:</strong> By appointment</p>
+          <button class="btn btn-outline" type="button" data-studio="1">Show on map 📍</button>
+        </div>
+      </div>
+      <h2>Find Us</h2>
+      <div id="map" role="region" aria-label="Interactive map showing our two studio locations"></div>
+    </section>
+
+    <section class="card" aria-labelledby="msg-title">
+      <h2 id="msg-title" class="section-title">Send Us a Message</h2>
+      <form id="contact-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <div class="field">
+          <label for="cname">Name</label>
+          <input type="text" id="cname" name="cname" required minlength="2" maxlength="60" autocomplete="name" placeholder="Your name">
+          <div class="error-msg" id="cname-err" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="cemail">Email</label>
+          <input type="email" id="cemail" name="cemail" required autocomplete="email" placeholder="you@example.com">
+          <div class="error-msg" id="cemail-err" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="cphone">Phone (optional)</label>
+          <input type="tel" id="cphone" name="cphone" autocomplete="tel" inputmode="tel" placeholder="e.g. 082 555 0123">
+          <div class="error-msg" id="cphone-err" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="topic">Type of Message</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a topic...</option>
+            <option value="question">General question</option>
+            <option value="pricing">Pricing and services</option>
+            <option value="feedback">Feedback or compliment</option>
+            <option value="collab">Collaboration or partnership</option>
+            <option value="complaint">Problem or complaint</option>
+          </select>
+          <div class="error-msg" id="topic-err" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500" placeholder="Tell us how we can help..."></textarea>
+          <div class="char-count">0 / 500</div>
+          <div class="error-msg" id="message-err" role="alert"></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" class="hp" tabindex="-1" autocomplete="off"></label></div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </div>
+    <p>&copy; <span id="year">2026</span> Crown &amp; Glory Hair Studio. All Rights Reserved. Made with 💖 in Johannesburg.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/map.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>
